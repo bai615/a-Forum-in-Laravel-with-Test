@@ -53,3 +53,12 @@ php artisan make:test ParticipateInForumTest
 phpunit tests/Feature/ParticipateInForumTest.php
 
 phpunit --filter an_authenticated_user_may_participate_in_forum_threads
+
+////////////////////////////////////////////////////////////////////////////////
+6/
+
+php artisan make:test CreateThreadsTest
+
+phpunit --filter an_authenticate
+
+phpunit --filter guests_may_not_create_threads
