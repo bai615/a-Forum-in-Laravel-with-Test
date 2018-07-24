@@ -29,3 +29,12 @@ php artisan make:test ThreadsTest
 phpunit
 
 php artisan make:auth
+
+/////////////////////////////////////////////////////////////////////////////////
+3/
+
+php artisan make:test ReadThreadsTest
+
+php artisan make:test ReplyTest --unit
+
+phpunit tests/Unit/ReplyTest.php
