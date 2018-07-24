@@ -62,3 +62,8 @@ php artisan make:test CreateThreadsTest
 phpunit --filter an_authenticate
 
 phpunit --filter guests_may_not_create_threads
+
+////////////////////////////////////////////////////////////////////////////////
+7/
+
+composer dump-autoload
