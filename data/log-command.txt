@@ -1,0 +1,20 @@
+php artisan migrate
+
+php artisan make:model Thread -m
+
+php artisan make:controller ThreadsController -r --model=Thread
+
+php artisan make:model Reply -m
+
+php artisan make:controller RepliesController -r --model=Reply
+
+php artisan migrate
+
+php artisan make:factory ThreadFactory
+php artisan make:factory ReplyFactory
+
+php artisan make:seeder UsersTableSeeder
+php artisan make:seeder ThreadsTableSeeder
+
+composer dump-autoload
+php artisan db:seed
