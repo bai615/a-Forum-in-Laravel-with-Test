@@ -48,7 +48,7 @@ class ParticipateInForumTest extends TestCase
         // Then their reply should be visible on the page
         $this->get($thread->path())
             ->assertSee($reply->body);
-    }
+    }gg
 
     /** @test */
     /*public function unauthenticated_user_may_no_add_replies()

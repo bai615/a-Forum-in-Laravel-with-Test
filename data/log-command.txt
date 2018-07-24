@@ -67,3 +67,27 @@ phpunit --filter guests_may_not_create_threads
 7/
 
 composer dump-autoload
+
+////////////////////////////////////////////////////////////////////////////////
+9/
+
+phpunit --filter a_thread_belongs_to_a_channel
+
+php artisan make:model Channel -m
+
+php artisan make:factory ChannelFactory
+
+phpunit --filter a_thread_belongs_to_a_channel
+
+phpunit --filter a_thread_can_make_a_string_path
+
+php artisan make:migration add_channel_to_threads_table --table=threads
+
+php artisan migrate
+php artisan migrate:refresh
+
+php artisan db:seed
+
+phpunit --filter an_authenticated_user_can_create_new_forum_threads
+
+phpunit --filter an_authenticated_user_may_participate_in_forum_threads
