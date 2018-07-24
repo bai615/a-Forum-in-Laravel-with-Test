@@ -1,3 +1,5 @@
+1/
+
 php artisan migrate
 
 php artisan make:model Thread -m
@@ -18,3 +20,12 @@ php artisan make:seeder ThreadsTableSeeder
 
 composer dump-autoload
 php artisan db:seed
+
+/////////////////////////////////////////////////////////////////////////////////
+2/
+
+php artisan make:test ThreadsTest
+
+phpunit
+
+php artisan make:auth
