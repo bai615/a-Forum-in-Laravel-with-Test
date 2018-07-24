@@ -38,3 +38,18 @@ php artisan make:test ReadThreadsTest
 php artisan make:test ReplyTest --unit
 
 phpunit tests/Unit/ReplyTest.php
+
+/////////////////////////////////////////////////////////////////////////////////
+4/
+
+php artisan make:test ThreadTest --unit
+
+phpunit tests/Unit/ThreadTest.php
+
+phpunit --filter a_thread_has_a_creator
+
+php artisan make:test ParticipateInForumTest
+
+phpunit tests/Feature/ParticipateInForumTest.php
+
+phpunit --filter an_authenticated_user_may_participate_in_forum_threads

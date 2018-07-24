@@ -29,7 +29,10 @@ class ReadThreadsTest extends TestCase
             ->create(['thread_id' => $this->thread->id]);
         // 那么当我们看该 Thread 时
         // 我们也要看到回复
-        $this->get('/threads/'.$this->thread->id)
+//        $this->get('/threads/'.$this->thread->id)
+//            ->assertSee($reply->body);
+        // 优化
+        $this->get($this->thread->path())
             ->assertSee($reply->body);
     }
 
