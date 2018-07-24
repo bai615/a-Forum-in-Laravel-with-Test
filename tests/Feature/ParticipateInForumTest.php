@@ -51,7 +51,7 @@ class ParticipateInForumTest extends TestCase
     }
 
     /** @test */
-    public function unauthenticated_user_may_no_add_replies()
+    /*public function unauthenticated_user_may_no_add_replies()
     {
         $this->expectException('Illuminate\Auth\AuthenticationException');
 
@@ -59,5 +59,5 @@ class ParticipateInForumTest extends TestCase
 
         $reply = factory('App\Reply')->create();
         $this->post($thread->path().'/replies',$reply->toArray());
-    }
+    }*/
 }
